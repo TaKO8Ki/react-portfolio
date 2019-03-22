@@ -6,22 +6,31 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 const App = () => (
   <BrowserRouter>
     <div>
-    <div>
-      <div><Link to='/'>Home</Link></div>
-      <div><Link to='/about'>About</Link></div>
-      <div><Link to='/friends'>Friends</Link></div>
+    <div class="header">
+      <div class="content">
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        <Link to='/friends'>Friends</Link>
+      </div>
     </div>
+    <div class="body">
       <Route exact path='/' component={Home} />
       <Route path='/about' component={About} />
       <Route path='/friends' component={Friends} />
+    </div>
     </div>
   </BrowserRouter>
 )
 
 const Home = () => (
-  <div>
-    <h2>Home</h2>
-    <p>@TaKO8Kiのポートフォリオ</p>
+  <div class="home">
+    <div class="img"><img src="https://i.gyazo.com/c022ae94fdfe4688247e7b2fdd5f283a.jpg"/></div>
+    <div class="content">
+      <h2>前田喬之</h2>
+      <p>神戸大学工学部市民工学科</p>
+      <div class="contact">
+      </div>
+    </div>
   </div>
 )
 const About = () => (

@@ -325,6 +325,7 @@ div.tech .each-column .date {
   /*about*/
   div.about {
     width: 95%;
+    margin-bottom: 20px;
   }
 
   /*works*/
@@ -344,6 +345,7 @@ div.tech .each-column .date {
   /*career*/
   div.career {
     width: 95%;
+    margin-bottom: 20px;
   }
 
   /*tech*/

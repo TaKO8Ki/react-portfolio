@@ -268,10 +268,6 @@ div.tech h2 {
   margin-bottom: 20px;
 }
 
-div.tech .each-column {
-  margin-bottom: 20px;
-}
-
 div.tech .each-column .content {
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   width: 270px;
@@ -300,6 +296,7 @@ div.tech .each-column .content img {
 div.tech .each-column {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 div.tech .each-column .description {
@@ -311,4 +308,60 @@ div.tech .each-column .description {
 div.tech .each-column .date {
   text-align: center;
   font-size: 14px;
+}
+
+@media (max-width: 765px) {
+
+  /*header*/
+  div.header .content {
+    width: 90%;
+  }
+
+  /*home*/
+  div.home .buttons {
+    width: 100%;
+  }
+  
+  /*about*/
+  div.about {
+    width: 95%;
+  }
+
+  /*works*/
+  div.works {
+    width: 95%;
+  }
+
+  div.works .each-column {
+    flex-direction: column;
+  }
+
+  div.works .each-column .content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /*career*/
+  div.career {
+    width: 95%;
+  }
+
+  /*tech*/
+  div.tech {
+    width: 95%;
+  }
+
+  div.tech .each-column {
+    margin-bottom: 0px;
+    flex-direction: column;
+  }
+
+  div.tech .each-column .content {
+    width: calc(100% - 10px);
+    margin-bottom: 20px;
+  }
+
+
+
+
 }

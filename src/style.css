@@ -75,7 +75,7 @@ div.home .buttons a div.name {
 
 /*about*/
 div.about {
-  width: 500px; 
+  width: 600px; 
   margin: 0 auto;
   border-radius: 5px;
   padding-bottom: 20px;
@@ -135,6 +135,10 @@ div.about .contact .each-column img {
 div.about .contact .each-column a.twitter img {
   height: 50px;
   object-fit: cover;
+}
+
+div.about .interest {
+  margin-top: 15px;
 }
 
 /*works*/

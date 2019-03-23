@@ -51,7 +51,7 @@ const About = () => (
             <a href="https://www.facebook.com/tako8ki" target="_blank"><img src={`${process.env.PUBLIC_URL}/facebook.png`} alt="Logo" /></a>
             <a href="https://www.linkedin.com/in/takayuki-maeda/" target="_blank"><img src={`${process.env.PUBLIC_URL}/linkedin.png`} alt="Logo" /></a>
             <a href="https://github.com/TaKO8Ki" target="_blank"><img src={`${process.env.PUBLIC_URL}/github.png`} alt="Logo" /></a>
-            <a href="https://qiita.com/TaKO8Ki" target="_blank"><img src={`${process.env.PUBLIC_URL}/qiita.png`} alt="Logo" /></a>
+            <a href="https://tako8ki.hatenablog.com/" target="_blank"><img src={`${process.env.PUBLIC_URL}/hatena.svg`} alt="Logo" /></a>
           </div>
         </div>
       </div>

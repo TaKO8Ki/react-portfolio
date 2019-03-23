@@ -158,8 +158,8 @@ const Tech = () => (
         <div class="content">
           <div class="title">Golang</div>
           <div class="description">
-            最近勉強時始めました。
-            とりあえず、チャットアプリを作ってみたりして勉強している最中です。
+            最近勉強を始めた言語です。
+            とりあえず、チャットアプリを作ってみたりしている最中です。
           </div>
           <div class="date">使用歴 : {Today.diff(Begin＿Go＿At, "month")}ヶ月</div>
         </div>
@@ -177,14 +177,14 @@ const Tech = () => (
           <div class="title">HTML・CSS</div>
           <div class="description">
             RailsやGoでサービスを作る時に使用します。
-            最低限のスキルはあると思います。
+            WEBサービスを作る上で必要な最低限のスキルレベルです。
           </div>
           <div class="date">使用歴 : {Today.diff(Begin＿Ruby＿At, "month")}ヶ月</div>
         </div>
         <div class="content">
           <div class="title">English</div>
           <div class="description">
-            英語のdocumentが支障無く読める程度の読解力はあります。
+            英語のdocumentが支障無く読める程度の英語力です。
             また、日常会話であれば、問題なく話せます。
           </div>
         </div>

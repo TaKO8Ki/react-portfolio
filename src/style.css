@@ -11,6 +11,7 @@ a {
 body {
   margin-top: 70px;
   background:#f6f6f6;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 div.header {
@@ -19,6 +20,7 @@ div.header {
   top: 0;
   width: 100%;
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+  font-size: 20px;
 }
 
 div.header .content {
@@ -29,14 +31,72 @@ div.header .content {
   padding: 10px;
 }
 
+/*home*/
+div.home {
+  background: linear-gradient(#FFECB3,#FFC107);
+  height: 1000px;
+  margin-top: -21px;
+}
+
+div.home .title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding-top: 60px;
+  color: #333;
+}
+
+div.home .buttons {
+  width: 500px; 
+  margin: 0 auto; 
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.home .buttons a {
+  display: inline-block; 
+  background: #FFF8E1; 
+  border-radius: 50%;
+  width: 100px; 
+  height: 100px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+}
+
+div.home .buttons a:hover {
+  background: #FFC107;
+}
+
+div.home .buttons a div.name {
+  margin-top: 35px;
+  text-align: center;
+  font-size: 20px;
+}
+
 /*about*/
 div.about {
   width: 500px; 
-  background: #fff;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   margin: 0 auto;
   border-radius: 5px;
   padding-bottom: 20px;
+}
+
+div.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.about .all-content {
+  width: 100%; 
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+  border-radius: 5px;
+  padding-bottom: 20px;
+}
+
+div.about .all-content .name {
+  font-size: 25px; 
+  font-weight: bold;
 }
 
 div.about .img {
@@ -57,7 +117,7 @@ div.about .content {
 }
 
 div.about .contact {
-  width: 150px;
+  width: 70%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -68,7 +128,12 @@ div.about .contact .each-column {
 }
 
 div.about .contact .each-column img {
-  height: 30px;
+  height: 45px;
+  object-fit: cover;
+}
+
+div.about .contact .each-column a.twitter img {
+  height: 50px;
   object-fit: cover;
 }
 
@@ -127,6 +192,20 @@ div.works .each-column .link a {
   color: #90A4AE;
   padding: 3px 10px;
   margin-left: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+div.works .each-column .link a:hover {
+  background: #90A4AE;
+  color: #fff;
+}
+
+div.works .each-column .title {
+  font-size: 20px; 
+  font-weight: bold; 
+  text-align: center;
+  padding-top: 20px;
 }
 
 /*career*/
@@ -156,6 +235,26 @@ div.all-careers {
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   padding: 20px;
   padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+div.all-careers .link {
+  margin-top: 10px;
+}
+
+div.all-careers .link a {
+  display: inline-block;
+  border: solid 1px #90A4AE;
+  color: #90A4AE;
+  padding: 3px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+div.all-careers .link a:hover {
+  background: #90A4AE;
+  color: #fff;
 }
 
 /*tech*/

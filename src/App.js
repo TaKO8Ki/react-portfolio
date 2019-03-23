@@ -115,7 +115,7 @@ const Career = () => (
       <div class="description">
         サーバーサイドエンジニアとして自社サービス「activo」の開発を行う長期インターンをしています。
         <div class="link">
-          <a href="https://activo.jp/">https://activo.jp/</a>
+          <a href="https://activo.jp/" target="_blank">https://activo.jp/</a>
         </div>
       </div>
       <div class="title">株式会社サイバーエージェント（2019年3月1日）</div>
@@ -181,7 +181,12 @@ const Tech = () => (
           </div>
           <div class="date">使用歴 : {Today.diff(Begin＿Ruby＿At, "month")}ヶ月</div>
         </div>
-        <div class="lack">
+        <div class="content">
+          <div class="title">English</div>
+          <div class="description">
+            英語のdocumentが支障無く読める程度の読解力はあります。
+            また、日常会話であれば、問題なく話せます。
+          </div>
         </div>
       </div>
     </div>

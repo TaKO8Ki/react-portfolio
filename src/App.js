@@ -31,9 +31,9 @@ const Home = () => (
   <div class="home">
     <div class="title">Takayuki Maeda's portfolio</div>
     <div class="buttons">
-    <a href="/works"><div class="name">Works</div></a>
-    <a href="/career"><div class="name">Career</div></a>
-    <a href="/tech"><div class="name">Tech</div></a>
+    <Link to='/works'><div class="name">Works</div></Link>
+    <Link to='/career'><div class="name">Career</div></Link>
+    <Link to='/tech'><div class="name">Tech</div></Link>
     </div>
   </div>
 )

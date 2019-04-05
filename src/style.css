@@ -152,6 +152,10 @@ div.works h2 {
   margin-bottom: 20px;
 }
 
+div.works .each-column {
+  margin-bottom: 20px;
+}
+
 div.works .each-column .content {
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   width: 280px;

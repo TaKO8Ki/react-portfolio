@@ -91,16 +91,30 @@ const Works = () => (
           </div>
         </div>
         <div class="content">
-          <div class="title">ポートフォリオ</div>
+          <div class="img">
+            <img src={`${process.env.PUBLIC_URL}/negomo.png`} alt="Logo" />
+          </div>
           <div class="description">
-            フロントエンドはほとんど手をつけていなかったので、
-            このポートフォリオを作るために少し勉強しました。
+            「Twitter就活の促進」をコンセプトにしたサービスです。
+            現在開発中ですが、ほとんど実装し終わっているので、サービス自体は公開しています。
             <div class="link">
-              <a href="https://tako8ki-portfolio.herokuapp.com/" target="_blank">ポートフォリオ</a>
+              <a href="https://negomo.me/" target="_blank">Negomo</a>
             </div>
           </div>
         </div>
       </div>
+      <div class="each-column">
+        <div class="content">
+            <div class="title">ポートフォリオ</div>
+            <div class="description">
+              フロントエンドはほとんど手をつけていなかったので、
+              このポートフォリオを作るために少し勉強しました。
+              <div class="link">
+                <a href="https://tako8ki-portfolio.herokuapp.com/" target="_blank">ポートフォリオ</a>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 )

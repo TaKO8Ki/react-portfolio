@@ -152,10 +152,6 @@ div.works h2 {
   margin-bottom: 20px;
 }
 
-div.works .each-column {
-  margin-bottom: 20px;
-}
-
 div.works .each-column .content {
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   width: 280px;
@@ -180,6 +176,7 @@ div.works .each-column .content img {
 
 div.works .each-column {
   display: flex;
+  margin-bottom: 20px;
   justify-content: space-between;
 }
 
@@ -343,6 +340,7 @@ div.tech .each-column .date {
 
   div.works .each-column {
     flex-direction: column;
+    margin-bottom: 0px;
   }
 
   div.works .each-column .content {

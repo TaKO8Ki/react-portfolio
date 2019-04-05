@@ -67,6 +67,18 @@ const Works = () => (
       <div class="each-column">
         <div class="content">
           <div class="img">
+            <img src={`${process.env.PUBLIC_URL}/negomo.png`} alt="Logo" />
+          </div>
+          <div class="description">
+            「Twitter就活の促進」をコンセプトにしたサービスです。
+            現在開発中ですが、ほとんど実装し終わっているので、サービス自体は公開しています。
+            <div class="link">
+              <a href="https://negomo.me/" target="_blank">Negomo</a>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="img">
             <img src={`${process.env.PUBLIC_URL}/linch.png`} alt="Logo" />
           </div>
           <div class="description">
@@ -87,18 +99,6 @@ const Works = () => (
             リリースまでは至っておらず、ソースコードを公開しています。
             <div class="link">
               <a href="https://github.com/TaKO8Ki/orepen" target="_blank">ソースコード</a>
-            </div>
-          </div>
-        </div>
-        <div class="content">
-          <div class="img">
-            <img src={`${process.env.PUBLIC_URL}/negomo.png`} alt="Logo" />
-          </div>
-          <div class="description">
-            「Twitter就活の促進」をコンセプトにしたサービスです。
-            現在開発中ですが、ほとんど実装し終わっているので、サービス自体は公開しています。
-            <div class="link">
-              <a href="https://negomo.me/" target="_blank">Negomo</a>
             </div>
           </div>
         </div>

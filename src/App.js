@@ -71,9 +71,10 @@ const Works = () => (
           </div>
           <div class="description">
             「Twitter就活の促進」をコンセプトにしたサービスです。
-            現在開発中ですが、ほとんど実装し終わっているので、サービス自体は公開しています。
+            サービスについて詳しく説明した記事を書いたので、ぜひご覧ください。
             <div class="link">
               <a href="https://negomo.me/" target="_blank">Negomo</a>
+              <a href="https://qiita.com/TaKO8Ki/items/f7812f3164e00199bda6" target="_blank">紹介記事</a>
             </div>
           </div>
         </div>
@@ -83,7 +84,7 @@ const Works = () => (
           </div>
           <div class="description">
             「助け合って検索する」をテーマにしたサービスLinch（リンク）です。
-            Qiitaでサービスの紹介記事を書いたので、そちらをみていただくと分かりやすいと思います。
+            こちらも、Qiitaでサービスの紹介記事を書いたので、そちらをみていただくと分かりやすいと思います。
             <div class="link">
               <a href="https://linch.link/" target="_blank">Linch</a>
               <a href="https://qiita.com/TaKO8Ki/items/fd6c39d67d8b32c3d47c" target="_blank">紹介記事</a>

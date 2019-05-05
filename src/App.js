@@ -72,6 +72,7 @@ const Works = () => (
           <div class="description">
             「Twitter就活の促進」をコンセプトにしたサービスです。
             サービスについて詳しく説明した記事を書いたので、ぜひご覧ください。
+            Dockerを導入して運用しています。
             <div class="link">
               <a href="https://negomo.me/" target="_blank">Negomo</a>
               <a href="https://qiita.com/TaKO8Ki/items/f7812f3164e00199bda6" target="_blank">紹介記事</a>
@@ -141,6 +142,12 @@ const Career = () => (
         このインターンの内容は、用意されたサーバー上にAPIを実装するというものです。
         いつもなら軽く済ませてしまう環境構築に時間を割いたり、使ったことのなかったSinatraで実装してみたりなど、技術的に非常に濃い時間を過ごすことができました。
       </div>
+      <div class="title">株式会社サイバーエージェント（2019年4月30日）</div>
+      <div class="description">
+      平成最後の日、4/30に行われた「平成最後のハッカソン」に参加しました。
+      即席の学生チームで開発を行ったので、上手くいかなかった点もありましたが、
+      チーム開発でのタスクの割り振りや環境構築などの大変さに気づくとてもいい機会になりました。
+      </div>
     </div>
   </div>
 )
@@ -198,6 +205,14 @@ const Tech = () => (
           </div>
           <div class="date">使用歴 : {Today.diff(Begin＿Ruby＿At, "month")}ヶ月</div>
         </div>
+        <div class="content">
+          <div class="title">Docker</div>
+          <div class="description">
+            インターン先や個人開発したNegomoというサービスで利用しています。
+          </div>
+        </div>
+      </div>
+      <div class="each-column">
         <div class="content">
           <div class="title">English</div>
           <div class="description">

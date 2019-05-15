@@ -81,6 +81,19 @@ const Works = () => (
         </div>
         <div class="content">
           <div class="img">
+            <img src={`${process.env.PUBLIC_URL}/golang_task_app_1000px.gif`} alt="Logo" />
+          </div>
+          <div class="description">
+            GolangとWebSocketで作ったリアルタイムタスク管理アプリです。
+            Golangを勉強し始めて1、2ヶ月ほど経った段階で作りました。
+            リポジトリのREADMEにより詳しい説明があります。
+            <div class="link">
+              <a href="https://github.com/TaKO8Ki/golang-websocket-task-app" target="_blank">リポジトリ</a>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="img">
             <img src={`${process.env.PUBLIC_URL}/linch.png`} alt="Logo" />
           </div>
           <div class="description">
@@ -92,6 +105,8 @@ const Works = () => (
             </div>
           </div>
         </div>
+      </div>
+      <div class="each-column">
         <div class="content">
           <div class="img">
             <img src={`${process.env.PUBLIC_URL}/orepen.png`} alt="Logo" />
@@ -104,19 +119,19 @@ const Works = () => (
             </div>
           </div>
         </div>
-      </div>
-      <div class="each-column">
         <div class="content">
-            <div class="title">ポートフォリオ</div>
-            <div class="description">
-              フロントエンドはほとんど手をつけていなかったので、
-              このポートフォリオを作るために少し勉強しました。
-              <div class="link">
-                <a href="https://tako8ki-portfolio.herokuapp.com/" target="_blank">ポートフォリオ</a>
-              </div>
+          <div class="title">ポートフォリオ</div>
+          <div class="description">
+            フロントエンドはほとんど手をつけていなかったので、
+            このポートフォリオを作るために少し勉強しました。
+            <div class="link">
+              <a href="https://tako8ki-portfolio.herokuapp.com/" target="_blank">ポートフォリオ</a>
             </div>
           </div>
         </div>
+        <div class="lack">
+        </div>
+      </div>
     </div>
   </div>
 )

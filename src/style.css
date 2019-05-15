@@ -160,7 +160,6 @@ div.works .each-column .content {
 }
 
 div.works .each-column .lack {
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   width: 260px;
   border-radius: 5px;
   margin-top: auto;

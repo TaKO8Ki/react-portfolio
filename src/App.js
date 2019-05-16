@@ -69,6 +69,10 @@ const Works = () => (
           <div class="img">
             <img src={`${process.env.PUBLIC_URL}/negomo.png`} alt="Logo" />
           </div>
+          <div class='tags'>
+            <p>個人開発</p>
+            <p>Ruby</p>
+          </div>
           <div class="description">
             「Twitter就活の促進」をコンセプトにしたサービスです。
             サービスについて詳しく説明した記事を書いたので、ぜひご覧ください。
@@ -83,6 +87,10 @@ const Works = () => (
           <div class="img">
             <img src={`${process.env.PUBLIC_URL}/golang_task_app_1000px.gif`} alt="Logo" />
           </div>
+          <div class='tags'>
+            <p>個人開発</p>
+            <p>Golang</p>
+          </div>
           <div class="description">
             GolangとWebSocketで作ったリアルタイムタスク管理アプリです。
             Golangを勉強し始めて1、2ヶ月ほど経った段階で作りました。
@@ -95,6 +103,10 @@ const Works = () => (
         <div class="content">
           <div class="img">
             <img src={`${process.env.PUBLIC_URL}/linch.png`} alt="Logo" />
+          </div>
+          <div class='tags'>
+            <p>個人開発</p>
+            <p>Ruby</p>
           </div>
           <div class="description">
             「助け合って検索する」をテーマにしたサービスLinch（リンク）です。
@@ -111,16 +123,24 @@ const Works = () => (
           <div class="img">
             <img src={`${process.env.PUBLIC_URL}/orepen.png`} alt="Logo" />
           </div>
+          <div class='tags'>
+            <p>個人開発</p>
+            <p>Ruby</p>
+          </div>
           <div class="description">
             WEBサービスをオープンソースでプレスリリースできるサービスです。
             リリースまでは至っておらず、ソースコードを公開しています。
             <div class="link">
-              <a href="https://github.com/TaKO8Ki/orepen" target="_blank">ソースコード</a>
+              <a href="https://github.com/TaKO8Ki/orepen" target="_blank">リポジトリ</a>
             </div>
           </div>
         </div>
         <div class="content">
           <div class="title">ポートフォリオ</div>
+          <div class='tags'>
+            <p>個人開発</p>
+            <p>React</p>
+          </div>
           <div class="description">
             フロントエンドはほとんど手をつけていなかったので、
             このポートフォリオを作るために少し勉強しました。
@@ -234,6 +254,10 @@ const Tech = () => (
             英語のdocumentが支障無く読める程度の英語力です。
             また、日常会話であれば、問題なく話せます。
           </div>
+        </div>
+        <div class="lack">
+        </div>
+        <div class="lack">
         </div>
       </div>
     </div>

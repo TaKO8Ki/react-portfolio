@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import styles from './style.css'
+import styles from './stylesheet/style.css'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
-import Card from './container/Card'
 import Home from './Home'
 import About from './About'
 import Works from './Works'

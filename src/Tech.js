@@ -5,9 +5,9 @@ import moment from 'moment'
 class Tech extends React.Component {
   
   render() {
-    const Begin＿Ruby＿At = moment('2018-06-01')
-    const Begin＿Python＿At = moment('2018-12-01')
-    const Begin＿Go＿At = moment('2019-02-20')
+    const BeginRubyAt = moment('2018-06-01')
+    const BeginPythonAt = moment('2018-12-01')
+    const BeginGoAt = moment('2019-02-20')
     const Today = moment()
 
     return (      
@@ -22,7 +22,7 @@ class Tech extends React.Component {
                 業務では、Rspecを使ってテストを書くこともよくあります。
                 実際に作ったサービスがあるので、そちらをみていただけると分かりやすいと思います。
               </div>
-              <div class="date">使用歴 : {Today.diff(Begin＿Ruby＿At, "month")}ヶ月</div>
+              <div class="date">使用歴 : {Today.diff(BeginRubyAt, "month")}ヶ月</div>
             </div>
             <div class="content">
               <div class="title">Python</div>
@@ -30,7 +30,7 @@ class Tech extends React.Component {
                 主に機械学習（自然言語処理）で使います。
                 コードを書く事自体はそれなりにできると思います。
               </div>
-              <div class="date">使用歴 : {Today.diff(Begin＿Python＿At, "month")}ヶ月</div>
+              <div class="date">使用歴 : {Today.diff(BeginPythonAt, "month")}ヶ月</div>
             </div>
             <div class="content">
               <div class="title">Golang</div>
@@ -38,7 +38,7 @@ class Tech extends React.Component {
                 最近勉強を始めた言語です。
                 とりあえず、チャットアプリを作ってみたりしている最中です。
               </div>
-              <div class="date">使用歴 : {Today.diff(Begin＿Go＿At, "month")}ヶ月</div>
+              <div class="date">使用歴 : {Today.diff(BeginGoAt, "month")}ヶ月</div>
             </div>
           </div>
           <div class="each-column">
@@ -56,7 +56,7 @@ class Tech extends React.Component {
                 RailsやGoでサービスを作る時に使用します。
                 WEBサービスを作る上で必要な最低限のスキルレベルです。
               </div>
-              <div class="date">使用歴 : {Today.diff(Begin＿Ruby＿At, "month")}ヶ月</div>
+              <div class="date">使用歴 : {Today.diff(BeginRubyAt, "month")}ヶ月</div>
             </div>
             <div class="content">
               <div class="title">Docker</div>

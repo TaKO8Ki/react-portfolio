@@ -12,7 +12,7 @@ class About extends React.Component {
             <div class="name">前田喬之</div>
             <div class="name">Takayuki Maeda</div>
             <p>神戸大学工学部市民工学科</p>
-            <p class="interest">興味：WEBサービス開発（主にサーバーサイド）・自然言語処理</p>
+            <p class="interest">興味：WEBサービス開発（主にサーバーサイド）</p>
             <div class="contact">
               <div class="each-column">
                 <a href="https://twitter.com/takoyaki3160" target="_blank" class="twitter"><img src={`${process.env.PUBLIC_URL}/twitter.png`} alt="Logo" /></a>

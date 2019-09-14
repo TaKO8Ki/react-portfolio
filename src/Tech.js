@@ -35,8 +35,7 @@ class Tech extends React.Component {
             <div class="content">
               <div class="title">Golang</div>
               <div class="description">
-                最近勉強を始めた言語です。
-                とりあえず、チャットアプリを作ってみたりしている最中です。
+                最近メインでやっている言語です。Treasureというインターンでも使用しました。
               </div>
               <div class="date">使用歴 : {Today.diff(BeginGoAt, "month")}ヶ月</div>
             </div>
@@ -45,8 +44,8 @@ class Tech extends React.Component {
             <div class="content">
               <div class="title">React</div>
               <div class="description">
-                このポートフォリオを作る時に初めて手をつけました。
-                今後は、WEBサービスを個人開発する際などに使用していこうと思います。
+                個人開発する時などに使用しています。
+                主に参加したインターンで触ることが多かったです。
               </div>
               <div class="date">使用歴 : 1ヶ月</div>
             </div>

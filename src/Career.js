@@ -7,7 +7,11 @@ class Career extends React.Component {
       <div class="career">
         <h2>Career</h2>
         <div class="all-careers">
-        <div class="title">神戸大学工学部市民工学科（2022年卒業予定）</div>
+          <div class="title">プログラミング開始（2018年6月）</div>
+          <div class="description">
+            最初に触った言語はRubyでした。            
+          </div>
+          <div class="title">神戸大学工学部市民工学科（2022年卒業予定）</div>
           <div class="description">
             市民工学科という学科で、土木工学について勉強しています。
           </div>

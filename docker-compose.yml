@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  web:
+    build: .
+    environment:
+      - NODE_ENV=production
+    command: [npm, run, start]
+    ports:
+      - $PORT:$PORT
+    volumes:
+      - .:/app

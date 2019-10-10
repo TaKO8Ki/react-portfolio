@@ -18,12 +18,15 @@ class Career extends React.Component {
           <div class="title">Sansan（2019年9/2から9/13まで）</div>
           <div class="description">
             SansanのEight事業部で就業型インターンをしていました。
+            <div class='link'>
+              <a href='https://tako8ki.hatenablog.com/entry/2019/10/07/121038' target="_blank">インターン参加記</a>
+            </div>
           </div>
           <div class="title">VOYAGE GROUP（2019年8/12から8/30）</div>
           <div class="description">
             Treasureというインターンに参加しました。
             <div class='link'>
-              <a href='https://tako8ki.hatenablog.com/entry/2019/09/08/234338?_ga=2.232758367.1516635728.1568504648-356135884.1529818775'>インターン参加記</a>
+              <a href='https://tako8ki.hatenablog.com/entry/2019/09/08/234338' target="_blank">インターン参加記</a>
             </div>
           </div>
           <div class="title">株式会社サイバーエージェント（2019年4月30日）</div>

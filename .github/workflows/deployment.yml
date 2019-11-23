@@ -57,4 +57,4 @@ jobs:
           name: scripts
       - name: Run deploy script
         run: |
-          ./deploy/deploy.sh
+          bash ./scripts/deploy.sh

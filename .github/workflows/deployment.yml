@@ -57,5 +57,4 @@ jobs:
           name: deploy
       - name: Run deploy script
         run: |
-          ssh -t TaKO8Ki@133.130.122.93 "ssh github actions"
           ./deploy/deploy.sh

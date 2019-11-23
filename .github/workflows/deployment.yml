@@ -1,4 +1,4 @@
-name: ReactPortfolio
+name: Node CI
 
 on: 
   push:
@@ -7,17 +7,23 @@ on:
 
 jobs:
   build:
-    container:
-      image: node:10.16-jessie
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
     steps:
-      - name: build static file
-        run: |
-          yarn install --frozen-lockfile
-          yarn build
-  deploy:
-    steps:
-      - name: hoge
-        run: echo hoge
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm ci
+        npm run build --if-present
+        npm test
+      env:
+        CI: true

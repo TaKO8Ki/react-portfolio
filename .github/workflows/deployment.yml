@@ -63,9 +63,9 @@ jobs:
           known-hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: Test
         run: |
-          echo ${{ secrets.SSH_KEY }}
-          echo ${{ secrets.SSH_KEY_PUBLIC }}
-          echo ${{ secrets.KNOWN_HOSTS }}
+          bash echo ${{ secrets.SSH_KEY }}
+          bash echo ${{ secrets.SSH_KEY_PUBLIC }}
+          bash echo ${{ secrets.KNOWN_HOSTS }}
       - name: Run deploy script
         run: |
           bash ./scripts/deploy.sh

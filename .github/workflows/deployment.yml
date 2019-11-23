@@ -55,13 +55,15 @@ jobs:
         with:
           name: scripts
       - name: Install SSH key
-        env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          SSH_KEY_PUBLIC: ${{ secrets.SSH_KEY_PUBLIC }}
-          KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
+        uses: shimataro/ssh-key-action@v1
+        with:
+          private-key: ${{ secrets.SSH_KEY }}
+          public-key: ${{ secrets.SSH_KEY_PUBLIC }}
+          name: id_rsa
+          known-hosts: ${{ secrets.KNOWN_HOSTS }}
         run: |
-          bash ./scripts/ssh_config.sh
-          cat ~/.ssh/id_rsa
+          echo ${{ secrets.SSH_KEY }}
+          echo ${{ secrets.KNOWN_HOSTS }}
       - name: Run deploy script
         run: |
           bash ./scripts/deploy.sh

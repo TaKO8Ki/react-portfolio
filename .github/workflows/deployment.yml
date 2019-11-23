@@ -60,7 +60,7 @@ jobs:
           SSH_KEY_PUBLIC: ${{ secrets.SSH_KEY_PUBLIC }}
           KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
         run: |
-          ./scripts/ssh_config.sh
+          bash ./scripts/ssh_config.sh
           cat ~/.ssh/id_rsa
       - name: Run deploy script
         run: |

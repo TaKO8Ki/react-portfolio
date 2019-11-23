@@ -46,6 +46,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download builded files
+        uses: actions/download-artifact@v1
+        with:
+          name: build
+      - name: Download scripts
+        uses: actions/download-artifact@v1
+        with:
+          name: scripts
       - name: Install SSH key
         env:
           SSH_KEY: ${{ secrets.SSH_KEY }}
@@ -54,14 +62,6 @@ jobs:
         run: |
           ./scripts/ssh_config.sh
           cat ~/.ssh/id_rsa
-      - name: Download builded files
-        uses: actions/download-artifact@v1
-        with:
-          name: build
-      - name: Download deploy.sh
-        uses: actions/download-artifact@v1
-        with:
-          name: scripts
       - name: Run deploy script
         run: |
           bash ./scripts/deploy.sh

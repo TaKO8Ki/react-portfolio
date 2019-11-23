@@ -32,7 +32,7 @@ jobs:
     - name: Upload deploy.sh
       uses: actions/upload-artifact@v1
       with:
-        name: deploy
+        name: scripts
         path: deploy.sh
 
   deploy:
@@ -54,7 +54,7 @@ jobs:
       - name: Download deploy.sh
         uses: actions/download-artifact@v1
         with:
-          name: deploy
+          name: scripts
       - name: Run deploy script
         run: |
-          rsync -acvz --delete ./build/ TaKO8Ki@133.130.122.93:/services/react-portfolio/
+          ./deploy/deploy.sh

@@ -55,11 +55,12 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: scripts
-      - name: ssh key generate
-        run: echo ”$SSH_KEY” > key ＆＆ chmod 600 key
-        env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v1
+        with:
+          private-key: ${{ secrets.SSH_KEY }}
+          public-key: ${{ secrets.SSH_KEY_PUBLIC }}
+          name: id_rsa
       - name: Run deploy script
         run: |
-          mkdir ~/.ssh/known_hosts
-          ssh -t -t -i key TaKO8Ki@133.130.122.93
+          bash ./scripts/deploy.sh

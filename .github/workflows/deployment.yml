@@ -48,4 +48,4 @@ jobs:
         with:
           name: build
       - name: Run deploy script
-        run: bash deploy.sh
+        run: ls

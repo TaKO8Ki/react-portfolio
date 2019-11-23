@@ -55,7 +55,7 @@ jobs:
       - name: Download deploy.sh
         uses: actions/download-artifact@v1
         with:
-          name: .
+          name: deploy.sh
       - name: Run deploy script
         run: |
           ls

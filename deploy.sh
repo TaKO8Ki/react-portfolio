@@ -1,5 +1,4 @@
-cat ~/.ssh/known_hosts
-ssh-keygen -R 133.130.122.93
+ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 ssh -t -t TaKO8Ki@133.130.122.93 <<EOF
 echo success
 exit

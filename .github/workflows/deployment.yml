@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    name: Build react app
     runs-on: ubuntu-latest
 
     strategy:
@@ -15,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
@@ -23,9 +24,17 @@ jobs:
       run: |
         yarn install --frozen-lockfile
         yarn build
-    - name: Persist build job data
+    - name: Upload builded files
       uses: actions/upload-artifact@v1
       with:
-        name: .
+        name: build
         path: build/
     
+  deploy:
+    name: Deploy react app
+    needs: build
+    runs-on: ubuntu-latest
+    - name: Download builded files
+        uses: actions/download-artifact@v1
+        with:
+          name: build

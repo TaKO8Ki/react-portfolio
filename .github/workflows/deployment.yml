@@ -29,6 +29,11 @@ jobs:
       with:
         name: build
         path: build/
+    - name: Upload ssh_config.sh
+      uses: actions/upload-artifact@v1
+      with:
+        name: scripts
+        path: ssh_config.sh
     - name: Upload deploy.sh
       uses: actions/upload-artifact@v1
       with:

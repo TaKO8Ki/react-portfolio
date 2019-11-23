@@ -29,12 +29,14 @@ jobs:
       with:
         name: build
         path: build/
-    
+
   deploy:
     name: Deploy react app
     needs: build
     runs-on: ubuntu-latest
-    - name: Download builded files
+
+    steps:
+      - name: Download builded files
         uses: actions/download-artifact@v1
         with:
           name: build

@@ -16,6 +16,6 @@ sed -i -e "s#\\\\n#\n#g" ~/.ssh/id_rsa
 echo ${SSH_KEY_PUBLIC} > ~/.ssh/id_rsa.pub
 sed -i -e "s#\\\\n#\n#g" ~/.ssh
 
-＃ のアクセス制限
+# アクセス制限
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa.pub

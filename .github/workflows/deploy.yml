@@ -64,4 +64,5 @@ jobs:
           known-hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: Run deploy script
         run: |
+          cat ~/.ssh/config
           bash ./scripts/deploy.sh

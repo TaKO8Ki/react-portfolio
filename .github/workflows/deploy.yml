@@ -61,4 +61,5 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_KEY }}
       - name: Run deploy script
         run: |
-          ssh -i key TaKO8Ki@133.130.122.93
+          ssh-keyscan -H 133.130.122.93 >> ~/.ssh/known_hosts
+          ssh -t -t -i key TaKO8Ki@133.130.122.93

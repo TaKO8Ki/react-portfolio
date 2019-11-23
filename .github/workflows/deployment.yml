@@ -63,7 +63,7 @@ jobs:
           known-hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: Run deploy script
         run: |
-          bash cat ~/.ssh/id_rsa
-          bash cat ~/.ssh/id_rsa.pub
-          bash cat ~/.ssh/known_hosts
+          cat ~/.ssh/id_rsa
+          cat ~/.ssh/id_rsa.pub
+          cat ~/.ssh/known_hosts
           bash ./scripts/deploy.sh

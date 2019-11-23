@@ -29,6 +29,11 @@ jobs:
       with:
         name: build
         path: build/
+    - name: Upload deploy.sh
+      uses: actions/upload-artifact@v1
+      with:
+        name: .
+        path: deploy.sh
 
   deploy:
     name: Deploy react app
@@ -47,7 +52,11 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: build
+      - name: Download deploy.sh
+        uses: actions/download-artifact@v1
+        with:
+          name: .
       - name: Run deploy script
         run: |
-          ls build/
-          bash build/deploy.sh
+          ls
+          bash deploy.sh

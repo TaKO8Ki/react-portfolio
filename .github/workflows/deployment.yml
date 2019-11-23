@@ -47,6 +47,7 @@ jobs:
           private-key: ${{ secrets.SSH_KEY }}
           public-key: ${{ secrets.SSH_KEY_PUBLIC }}
           name: id_rsa
+          known-hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: Download builded files
         uses: actions/download-artifact@v1
         with:

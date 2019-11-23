@@ -1,4 +1,4 @@
-name: Node CI
+name: Deployment
 
 on: 
   push:
@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -22,6 +21,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: yarn install, build
       run: |
-        yarn install
+        yarn install --frozen-lockfile
+        yarn build
       env:
         CI: true
+    - name: Persist build job data
+        uses: actions/upload-artifact@v1
+        with:
+          name: react-portofolio
+          path: build/*
+    

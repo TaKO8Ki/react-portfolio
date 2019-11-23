@@ -59,4 +59,4 @@ jobs:
       - name: Run deploy script
         run: |
           ls
-          bash deploy.sh
+          bash deploy/deploy.sh

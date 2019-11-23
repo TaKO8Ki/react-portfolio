@@ -1,0 +1,23 @@
+name: ReactPortfolio
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    container:
+      image: node:10.16-jessie
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: build static file
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+  deploy:
+    steps:
+      - name: hoge
+        run: echo hoge

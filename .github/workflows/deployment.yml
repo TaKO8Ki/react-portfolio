@@ -25,7 +25,6 @@ jobs:
         yarn build
     - name: Persist build job data
       uses: actions/upload-artifact@v1
-      with:
-        name: react-portofolio
+      with:      
         path: build/*
     

@@ -73,13 +73,14 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: docker build, push image
       run: |
+        ls scripts
         bash ./scripts/deploy.sh
-    # - name: copy file via ssh key
+    # - name: send docker-compose.yml
     #   uses: appleboy/scp-action@master
     #   env:
     #     HOST: ${{ secrets.KNOWN_HOSTS }}
     #     USERNAME: TaKO8Ki
     #     KEY: ${{ secrets.SSH_KEY }}
     #   with:
-    #     source: "build/"
+    #     source: "scripts/docker-compose.yml"
     #     target: "services/react-portfolio/"

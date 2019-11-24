@@ -66,8 +66,9 @@ jobs:
         HOST: ${{ secrets.KNOWN_HOSTS }}
         USERNAME: TaKO8Ki
         KEY: ${{ secrets.SSH_KEY }}
-        source: "build/"
-        target: "services/react-portfolio/"
+      with:
+        source: "scripts/docker-compose.yml"
+        target: "services/react-portfolio"
     # - name: docker login
     #   uses: azure/docker-login@v1
     #   with:

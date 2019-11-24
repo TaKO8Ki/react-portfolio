@@ -69,6 +69,7 @@ jobs:
         PORT: 5000
       run: |
         mv scripts/Dockerfile ../
+        ls
         bash ./scripts/deploy.sh
     - name: send docker-compose.yml
       uses: appleboy/scp-action@master

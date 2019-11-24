@@ -69,4 +69,4 @@ jobs:
         KEY: ${{ secrets.SSH_KEY }}
       with:
         source: "build/"
-        target: "services/react-portfolio/build/"
+        target: "services/react-portfolio/"

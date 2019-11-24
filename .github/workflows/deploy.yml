@@ -44,6 +44,11 @@ jobs:
       with:
         name: scripts
         path: docker-compose.yml
+    - name: upload docker-compose.yml
+      uses: actions/upload-artifact@v1
+      with:
+        name: scripts
+        path: .env
 
   deploy:
     name: Deploy
@@ -76,7 +81,7 @@ jobs:
         ls scripts
         mv scripts/docker-compose.yml ../
         mv scripts/Dockerfile ../
-        ls
+        mv scripts/.env ../
         bash ./scripts/deploy.sh
     # - name: send docker-compose.yml
     #   uses: appleboy/scp-action@master

@@ -60,13 +60,13 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: scripts
-    - name: 
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.KNOWN_HOSTS }}
-        username: TaKO8Ki
-        key: ${{ secrets.SSH_KEY }}
-        script: ls
+    # - name: 
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.KNOWN_HOSTS }}
+    #     username: TaKO8Ki
+    #     key: ${{ secrets.SSH_KEY }}
+    #     script: ls
     - name: docker login
       uses: azure/docker-login@v1
       with:

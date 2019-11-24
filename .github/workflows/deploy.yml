@@ -68,24 +68,24 @@ jobs:
       with:
         source: "scripts/docker-compose.yml"
         target: "services/react-portfolio"
-    # - name: docker login
-    #   uses: azure/docker-login@v1
-    #   with:
-    #     username: ${{ secrets.REGISTRY_USERNAME }}
-    #     password: ${{ secrets.REGISTRY_PASSWORD }}
-    # - name: docker build, push image
-    #   env:
-    #     PORT: 5000
-    #   run: |
-    #     mv scripts/Dockerfile ../
-    #     bash ./scripts/deploy.sh
-    # - name: 
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     host: ${{ secrets.KNOWN_HOSTS }}
-    #     username: TaKO8Ki
-    #     key: ${{ secrets.SSH_KEY }}
-    #     script: |
-    #       cd services/react-portfolio
-    #       docker pull takoyaki0316/react-portfolio:latest
-    #       docker iamge
+    - name: docker login
+      uses: azure/docker-login@v1
+      with:
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    - name: docker build, push image
+      env:
+        PORT: 5000
+      run: |
+        mv scripts/Dockerfile ../
+        bash ./scripts/deploy.sh
+    - name: 
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.KNOWN_HOSTS }}
+        username: TaKO8Ki
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd services/react-portfolio
+          docker pull takoyaki0316/react-portfolio:latest
+          docker images

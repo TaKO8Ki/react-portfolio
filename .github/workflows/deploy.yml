@@ -79,10 +79,6 @@ jobs:
         target: services/react-portfolio
     - name: 
       uses: appleboy/ssh-action@master
-      env:
-        REPLICAS: 1
-        DOMAIN: tako8ki.me
-        PORT: 5000
       with:
         host: ${{ secrets.KNOWN_HOSTS }}
         username: TaKO8Ki

@@ -14,7 +14,7 @@ class App extends React.Component {
         <div>
         <div class="header">
           <div class="content">
-            <Link to='/'>Home</Link>
+            <Link to='/'>Emoh</Link>
             <Link to='/about'>About</Link>
             <Link to='/works'>Works</Link>
             <Link to='/career'>Career</Link>

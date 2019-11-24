@@ -68,6 +68,8 @@ jobs:
       env:
         PORT: 5000
       run: |
+        ls
+        echo hoge
         mv scripts/Dockerfile ../
         ls
         bash ./scripts/deploy.sh

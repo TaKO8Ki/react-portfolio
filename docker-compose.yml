@@ -15,7 +15,7 @@ services:
       labels:
         - traefik.frontend.rule=Host:${DOMAIN?Variable DOMAIN not set}
         - traefik.port=${PORT}
-        - traefik.backend=puppeteer
+        - traefik.backend=portfolio
         - traefik.docker.network=traefik-public
         - traefik.tags=traefik-public
         - traefik.enable=true

@@ -54,12 +54,14 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: scripts
-      - name: Install SSH key
-        uses: shimataro/ssh-key-action@v1
+      - name: ls -a via OPEN SSH Private Key
+        uses: garygrossgarten/github-action-ssh@release
         with:
-          private-key: ${{ secrets.SSH_KEY }}
-          public-key: ${{ secrets.SSH_KEY_PUBLIC }}
-          name: id_rsa
+          command: ls -a
+          host: ${{ secrets.KNOWN_HOSTS }}
+          username: TaKO8Ki
+          passphrase: ${{ secrets.PASSPHRASE }}
+          privateKey: ${{ secrets.SSH_KEY}}
       - name: Run deploy script
         run: |
           ls ~/.ssh/

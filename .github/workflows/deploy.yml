@@ -67,6 +67,7 @@ jobs:
         DEPLOY_KEY: ${{ secrets.SSH_KEY }}
         ARGS: "-e -c -r --delete"
         FOLDER: "build"
+        SERVER_PORT: 8080
         SERVER_IP: ${{ secrets.KNOWN_HOSTS }}
         USERNAME: TaKO8Ki
         SERVER_DESTINATION: /services/react-portfolio/

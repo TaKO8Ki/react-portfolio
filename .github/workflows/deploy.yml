@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to server
 
 on: 
   push:
@@ -83,6 +83,7 @@ jobs:
         host: ${{ secrets.KNOWN_HOSTS }}
         username: TaKO8Ki
         key: ${{ secrets.SSH_KEY }}
+        script_stop: true
         script: |
           cd services/react-portfolio
           export REPLICAS=2

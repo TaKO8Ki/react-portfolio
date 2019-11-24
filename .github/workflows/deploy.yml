@@ -63,7 +63,7 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: docker build, push container
       run: |
-        ./scripts/deploy.sh
+        bash ./scripts/deploy.sh
     # - name: copy file via ssh key
     #   uses: appleboy/scp-action@master
     #   env:

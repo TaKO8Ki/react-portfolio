@@ -64,11 +64,13 @@ jobs:
       with:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
+    - name: prepare for Dockerfile
+      run: |
+        cp scripts/Dockerfile.yml ../
     - name: docker build, push image
       env:
         PORT: 5000
       run: |
-        cp scripts/docker-compose.yml ../
         ls
         bash ./scripts/deploy.sh
     - name: send docker-compose.yml

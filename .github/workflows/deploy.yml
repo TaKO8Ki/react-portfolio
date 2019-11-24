@@ -68,9 +68,7 @@ jobs:
       env:
         PORT: 5000
       run: |
-        ls scripts
-        echo hoge
-        cp scripts/Dockerfile ../
+        cp scripts/docker-compose.yml ../
         ls
         bash ./scripts/deploy.sh
     - name: send docker-compose.yml

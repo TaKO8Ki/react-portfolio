@@ -66,7 +66,7 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: prepare for Dockerfile
       run: |
-        cp scripts/Dockerfile.yml ../
+        cp scripts/Dockerfile ../
     - name: docker build, push image
       env:
         PORT: 5000

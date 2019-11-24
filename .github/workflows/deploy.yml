@@ -67,7 +67,7 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.SSH_KEY}}
       with:
-        flags: '-avzr --delete'
+        flags: '-av'
         options: '' 
         src: 'build/'
         dst: 'TaKO8Ki@133.130.122.93:/services/react-portfolio/build'

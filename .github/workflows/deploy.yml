@@ -90,4 +90,5 @@ jobs:
         script: |
           cd services/react-portfolio
           docker pull takoyaki0316/react-portfolio:latest
-          docker stack deploy -c ./scripts/docker-compose.yml portfolio $REPLICAS $DOMAIN $PORT
+          echo $PORT
+          echo $DOMAIN

@@ -70,7 +70,7 @@ jobs:
       run: |
         ls scripts
         echo hoge
-        mv scripts/Dockerfile ../
+        mv /scripts/Dockerfile ~/
         ls
         bash ./scripts/deploy.sh
     - name: send docker-compose.yml

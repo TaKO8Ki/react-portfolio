@@ -7,4 +7,4 @@ services:
     working_dir: /app
     command: serve -s .
     ports:
-      - $PORT:$PORT
+      - $PORT

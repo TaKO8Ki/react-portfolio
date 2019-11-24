@@ -80,7 +80,7 @@ jobs:
     - name: 
       uses: appleboy/ssh-action@master
       env:
-        PORT: 5000
+        PORT: "5000"
       with:
         host: ${{ secrets.KNOWN_HOSTS }}
         username: TaKO8Ki

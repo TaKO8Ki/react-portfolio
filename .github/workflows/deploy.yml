@@ -46,7 +46,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
     - name: Download builded files
       uses: actions/download-artifact@v1
       with:
@@ -68,6 +67,7 @@ jobs:
         DEPLOY_KEY: ${{ secrets.SSH_KEY }}
         ARGS: "-e -c -r --delete"
         FOLDER: "build"
+        SERVER_PORT: ${{ secrets.SERVER_PORT }}
         SERVER_IP: ${{ secrets.KNOWN_HOSTS }}
         USERNAME: TaKO8Ki
         SERVER_DESTINATION: /services/react-portfolio/

@@ -24,7 +24,7 @@ jobs:
       run: |
         yarn install --frozen-lockfile
         yarn build
-    - name: Upload builded files
+    - name: upload build files
       uses: actions/upload-artifact@v1
       with:
         name: build
@@ -34,6 +34,16 @@ jobs:
       with:
         name: scripts
         path: bin/
+    - name: upload Dockerfile
+      uses: actions/upload-artifact@v1
+      with:
+        name: scripts
+        path: Dockerfile
+    - name: upload docker-compose.yml
+      uses: actions/upload-artifact@v1
+      with:
+        name: scripts
+        path: docker-compose.yml
 
   deploy:
     name: Deploy
@@ -41,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: download builded files
+    - name: download build files
       uses: actions/download-artifact@v1
       with:
         name: build
@@ -61,7 +71,7 @@ jobs:
       with:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-    - name: docker build, push container
+    - name: docker build, push image
       run: |
         bash ./scripts/deploy.sh
     # - name: copy file via ssh key

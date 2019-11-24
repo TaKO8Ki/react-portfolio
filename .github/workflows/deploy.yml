@@ -54,13 +54,13 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: scripts
-    # - name: ls -a via OPEN SSH Private Key
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     host: ${{ secrets.KNOWN_HOSTS }}
-    #     username: TaKO8Ki
-    #     key: ${{ secrets.SSH_KEY }}
-    #     script: ls
+    - name: ls -a via OPEN SSH Private Key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.KNOWN_HOSTS }}
+        username: TaKO8Ki
+        key: ${{ secrets.SSH_KEY }}
+        script: ls
     - name: copy file via ssh key
       uses: appleboy/scp-action@master
       env:

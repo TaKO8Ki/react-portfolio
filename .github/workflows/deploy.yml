@@ -60,4 +60,13 @@ jobs:
           host: ${{ secrets.KNOWN_HOSTS }}
           username: TaKO8Ki
           key: ${{ secrets.SSH_KEY }}
-          script: ls 
+          script: ls
+      - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@v2.0.2
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+        ARGS: ""
+        SOURCE: build/
+        REMOTE_HOST: ${{ secrets.KNOWN_HOSTS }}
+        REMOTE_USER: TaKO8Ki
+        TARGET: /services/react-portfolio/

@@ -71,13 +71,20 @@ jobs:
       run: |
         mv scripts/docker-compose.yml ../
         mv scripts/Dockerfile ../
-        bash ./scripts/deploy.sh
-    - name: send docker-compose.yml
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.KNOWN_HOSTS }
-        USERNAME: TaKO8Ki
-        KEY: ${{ secrets.SSH_KEY }}
+        bash ./scripts/dep
+    - name: 
+      uses: appleboy/ssh-action@master
       with:
-        source: "scripts/docker-compose.yml"
-        target: "services/react-portfolio/"
+        host: ${{ secrets.KNOWN_HOSTS }}
+        username: TaKO8Ki
+        key: ${{ secrets.SSH_KEY }}
+        script: ls
+    # - name: send docker-compose.yml
+    #   uses: appleboy/scp-action@master
+    #   env:
+    #     HOST: ${{ secrets.KNOWN_HOSTS }
+    #     USERNAME: TaKO8Ki
+    #     KEY: ${{ secrets.SSH_KEY }}
+    #   with:
+    #     source: "scripts/docker-compose.yml"
+    #     target: "services/react-portfolio/"

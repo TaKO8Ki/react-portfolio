@@ -79,6 +79,10 @@ jobs:
         target: services/react-portfolio
     - name: 
       uses: appleboy/ssh-action@master
+      env:
+        REPLICAS: 1
+        DOMAIN: tako8ki.me
+        PORT: 5000
       with:
         host: ${{ secrets.KNOWN_HOSTS }}
         username: TaKO8Ki
@@ -86,4 +90,4 @@ jobs:
         script: |
           cd services/react-portfolio
           docker pull takoyaki0316/react-portfolio:latest
-          docker stack deploy -c ./scripts/docker-compose.yml portfolio
+          docker stack deploy -c ./scripts/docker-compose.yml portfolio $REPLICAS $DOMAIN $PORT

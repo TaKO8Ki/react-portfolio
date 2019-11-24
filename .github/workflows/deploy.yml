@@ -67,7 +67,7 @@ jobs:
         USERNAME: TaKO8Ki
         KEY: ${{ secrets.SSH_KEY }}
       with:
-        source: "scripts/docker-compose.yml"
+        source: "build/"
         target: "services/react-portfolio/"
     - name: docker login
       uses: azure/docker-login@v1

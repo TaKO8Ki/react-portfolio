@@ -69,17 +69,17 @@ jobs:
       with:
         source: "build/"
         target: "services/react-portfolio/"
-    - name: docker login
-      uses: azure/docker-login@v1
-      with:
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
-    - name: docker build, push image
-      env:
-        PORT: 5000
-      run: |
-        mv scripts/Dockerfile ../
-        bash ./scripts/deploy.sh
+    # - name: docker login
+    #   uses: azure/docker-login@v1
+    #   with:
+    #     username: ${{ secrets.REGISTRY_USERNAME }}
+    #     password: ${{ secrets.REGISTRY_PASSWORD }}
+    # - name: docker build, push image
+    #   env:
+    #     PORT: 5000
+    #   run: |
+    #     mv scripts/Dockerfile ../
+    #     bash ./scripts/deploy.sh
     # - name: 
     #   uses: appleboy/ssh-action@master
     #   with:

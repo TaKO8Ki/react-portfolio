@@ -56,11 +56,12 @@ jobs:
         username: TaKO8Ki
         key: ${{ secrets.SSH_KEY }}
         script: ls
-    - name: docker build, push container
+    - name: docker login
       uses: azure/docker-login@v1
       with:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
+    - name: docker build, push container
       run: |
         ./scripts/deploy.sh
     # - name: copy file via ssh key

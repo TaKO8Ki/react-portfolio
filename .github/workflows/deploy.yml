@@ -81,7 +81,7 @@ jobs:
       with:
         source: "scripts/docker-compose.yml"
         target: "services/react-portfolio/"
-    - name: 
+    - name: docker pull image, deploy 
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.KNOWN_HOSTS }}

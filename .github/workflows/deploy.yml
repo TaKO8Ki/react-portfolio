@@ -86,5 +86,7 @@ jobs:
         script: |
           cd services/react-portfolio
           docker pull takoyaki0316/react-portfolio:latest
+          export REPLICAS=1
+          export DOMAIN=tako8ki.me
           export PORT=5000
-          echo $PORT
+          docker stack deploy -c ./scripts/docker-compose.yml portfolio

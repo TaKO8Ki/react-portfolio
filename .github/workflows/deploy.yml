@@ -81,13 +81,3 @@ jobs:
       with:
         source: "scripts/docker-compose.yml"
         target: "services/react-portfolio/"
-    - name: docker pull image, deploy 
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.KNOWN_HOSTS }}
-        username: TaKO8Ki
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          cd services/react-portfolio
-          docker pull takoyaki0316/react-portfolio:latest
-          ls

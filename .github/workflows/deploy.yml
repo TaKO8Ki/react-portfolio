@@ -66,7 +66,6 @@ jobs:
         HOST: ${{ secrets.KNOWN_HOSTS }}
         USERNAME: TaKO8Ki
         KEY: ${{ secrets.SSH_KEY }}
-      with:
         source: "build/"
         target: "services/react-portfolio/"
     # - name: docker login

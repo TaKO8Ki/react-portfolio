@@ -55,14 +55,10 @@ jobs:
         with:
           name: scripts
       - name: ls -a via OPEN SSH Private Key
-        uses: garygrossgarten/github-action-ssh@release
+        uses: appleboy/ssh-action@master
         with:
-          command: ls -a ~/.ssh/
           host: ${{ secrets.KNOWN_HOSTS }}
           username: TaKO8Ki
-          passphrase: ${{ secrets.PASSPHRASE }}
-          privateKey: ${{ secrets.SSH_KEY}}
-      - name: Run deploy script
-        run: |
-          ls ~/.ssh/
-          bash ./scripts/deploy.sh
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: ./scripts/deploy.sh 

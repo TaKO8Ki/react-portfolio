@@ -62,12 +62,12 @@ jobs:
     #     key: ${{ secrets.SSH_KEY }}
     #     script: ls
     - name: Deploy to server
-      uses: AEnterprise/rsync-deploy@v1.0
+      id: deploy
+      uses: Pendect/action-rsyncer@master
       env:
-        DEPLOY_KEY: ${{ secrets.SSH_KEY }}
-        ARGS: "-e -c -r --delete"
-        FOLDER: "build"
-        SERVER_PORT: 8080
-        SERVER_IP: ${{ secrets.KNOWN_HOSTS }}
-        USERNAME: TaKO8Ki
-        SERVER_DESTINATION: /services/react-portfolio/
+        DEPLOY_KEY: ${{secrets.SSH_KEY}}
+      with:
+        flags: '-avzr --delete'
+        options: '' 
+        src: 'build/'
+        dst: 'TaKO8Ki@133.130.122.93:/services/react-portfolio/'

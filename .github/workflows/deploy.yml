@@ -79,7 +79,7 @@ jobs:
         USERNAME: TaKO8Ki
         KEY: ${{ secrets.SSH_KEY }}
       with:
-        source: "scripts/docker-compose.yml"
+        source: "docker-compose.yml"
         target: "services/react-portfolio/"
     - name: 
       uses: appleboy/ssh-action@master

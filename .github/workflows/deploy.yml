@@ -70,4 +70,4 @@ jobs:
         flags: '-avzr --delete'
         options: '' 
         src: 'build/'
-        dst: 'TaKO8Ki@133.130.122.93:/services/react-portfolio/'
+        dst: 'TaKO8Ki@133.130.122.93:/services/react-portfolio/build'

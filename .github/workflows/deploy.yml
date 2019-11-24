@@ -79,10 +79,13 @@ jobs:
         target: services/react-portfolio
     - name: 
       uses: appleboy/ssh-action@master
+      env:
+        PORT: 5000
       with:
         host: ${{ secrets.KNOWN_HOSTS }}
         username: TaKO8Ki
         key: ${{ secrets.SSH_KEY }}
+        envs: PORT
         script: |
           cd services/react-portfolio
           docker pull takoyaki0316/react-portfolio:latest

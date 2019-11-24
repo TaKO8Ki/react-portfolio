@@ -57,7 +57,7 @@ jobs:
       - name: ls -a via OPEN SSH Private Key
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: ls -a
+          command: ls -a ~/.ssh/
           host: ${{ secrets.KNOWN_HOSTS }}
           username: TaKO8Ki
           passphrase: ${{ secrets.PASSPHRASE }}

@@ -85,7 +85,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd services/react-portfolio
-          export REPLICAS=1
+          export REPLICAS=2
           export DOMAIN=tako8ki.me
           export PORT=5000
           docker rmi `docker images takoyaki0316/react-portfolio --filter "dangling=true" -q`

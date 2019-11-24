@@ -60,5 +60,4 @@ jobs:
           host: ${{ secrets.KNOWN_HOSTS }}
           username: TaKO8Ki
           key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.PORT }}
           script: ./scripts/deploy.sh 

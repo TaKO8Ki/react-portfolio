@@ -3,10 +3,8 @@ version: '3'
 services:
   web:
     build: .
-    environment:
-      - NODE_ENV=production
-    command: [npm, run, start]
+    image: takoyaki0316/react-portfolio
+    working_dir: /app
+    command: serve -s .
     ports:
       - $PORT:$PORT
-    volumes:
-      - .:/app

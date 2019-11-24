@@ -1,8 +1,7 @@
-FROM node:8.9-alpine
+FROM node:latest
 
-RUN mkdir /app
-WORKDIR /app
-COPY /src /app/src
-COPY ["package.json", "package-lock.json*", "./"]
+WORKDIR app
 
-RUN npm install --production --silent && mv node_modules ../
+COPY ./build/ .
+
+RUN npm install -g serve

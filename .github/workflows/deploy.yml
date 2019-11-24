@@ -16,11 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Use node.js ${{ matrix.node-version }}
+    - name: use node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Yarn install, build
+    - name: yarn install, build
       run: |
         yarn install --frozen-lockfile
         yarn build
@@ -29,16 +29,11 @@ jobs:
       with:
         name: build
         path: build/
-    - name: Upload ssh_config.sh
+    - name: upload scripts
       uses: actions/upload-artifact@v1
       with:
         name: scripts
-        path: ssh_config.sh
-    - name: Upload deploy.sh
-      uses: actions/upload-artifact@v1
-      with:
-        name: scripts
-        path: deploy.sh
+        path: bin/
 
   deploy:
     name: Deploy
@@ -46,27 +41,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download builded files
+    - name: download builded files
       uses: actions/download-artifact@v1
       with:
         name: build
-    - name: Download scripts
+    - name: download scripts
       uses: actions/download-artifact@v1
       with:
         name: scripts
-    - name: ls -a via OPEN SSH Private Key
+    - name: 
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.KNOWN_HOSTS }}
         username: TaKO8Ki
         key: ${{ secrets.SSH_KEY }}
         script: ls
-    - name: copy file via ssh key
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.KNOWN_HOSTS }}
-        USERNAME: TaKO8Ki
-        KEY: ${{ secrets.SSH_KEY }}
+    - name: docker build, push container
+      uses: azure/docker-login@v1
       with:
-        source: "build/"
-        target: "services/react-portfolio/"
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+      run: |
+        ./scripts/deploy.sh
+    # - name: copy file via ssh key
+    #   uses: appleboy/scp-action@master
+    #   env:
+    #     HOST: ${{ secrets.KNOWN_HOSTS }}
+    #     USERNAME: TaKO8Ki
+    #     KEY: ${{ secrets.SSH_KEY }}
+    #   with:
+    #     source: "build/"
+    #     target: "services/react-portfolio/"

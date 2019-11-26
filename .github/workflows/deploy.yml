@@ -64,12 +64,6 @@ jobs:
       with:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-    - name: Create deployment
-      uses: niklasmerz/github-deployment-action@master
-      env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-      args: -o niklasmerz -r myrepo -c master -e production
     - name: Docker build, push image
       run: |
         # オープンソースなのでDocker Hubで済ませる
@@ -83,6 +77,11 @@ jobs:
       with:
         source: scripts/docker-compose.yml
         target: services/react-portfolio
+    - name: 'Deployment pending'
+      uses: 'deliverybot/status@master'
+      with:
+        state: 'pending'
+        token: '${{ secrets.GITHUB_TOKEN }}'
     - name: Deploy to server
       uses: appleboy/ssh-action@master
       with:
@@ -98,10 +97,3 @@ jobs:
           docker rmi `docker images takoyaki0316/react-portfolio --filter "dangling=true" -q` -f
           docker pull takoyaki0316/react-portfolio:latest
           docker stack deploy -c ./scripts/docker-compose.yml portfolio
-    - name: Deployment success
-      uses: niklasmerz/github-deployment-action@master
-      if: success()
-      env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-      args: -o niklasmerz -r myrepo -s success -u https://url.com -f

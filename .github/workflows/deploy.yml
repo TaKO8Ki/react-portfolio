@@ -67,9 +67,9 @@ jobs:
     - name: Create deployment
       uses: niklasmerz/github-deployment-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        args: -o niklasmerz -r myrepo -c master -e production
+      args: -o niklasmerz -r myrepo -c master -e production
     - name: Docker build, push image
       run: |
         # オープンソースなのでDocker Hubで済ませる
@@ -102,6 +102,6 @@ jobs:
       uses: niklasmerz/github-deployment-action@master
       if: success()
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        args: -o niklasmerz -r myrepo -s success -u https://url.com -f
+      args: -o niklasmerz -r myrepo -s success -u https://url.com -f

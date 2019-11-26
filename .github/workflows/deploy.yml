@@ -68,7 +68,7 @@ jobs:
       uses: 'deliverybot/status@master'
       with:
         state: 'pending'
-        token: '${{ secrets.GITHUB_TOKEN }}'
+        token: '${{ secrets.TOKEN }}'
     - name: Docker build, push image
       run: |
         # オープンソースなのでDocker Hubで済ませる
@@ -107,10 +107,10 @@ jobs:
       uses: 'deliverybot/status@master'
       with:
         state: 'success'
-        token: '${{ secrets.GITHUB_TOKEN }}'
+        token: '${{ secrets.TOKEN }}'
     - name: 'deployment failure'
       if: failure()
       uses: 'deliverybot/status@master'
       with:
         state: 'failure'
-        token: '${{ secrets.GITHUB_TOKEN }}' 
+        token: '${{ secrets.TOKEN }}' 

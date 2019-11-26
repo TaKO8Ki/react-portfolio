@@ -64,11 +64,12 @@ jobs:
       with:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-    - name: Deployment pending
-      uses: 'deliverybot/status@master'
+    - name: Create deployment
+      uses: niklasmerz/github-deployment-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        state: 'pending'
-        token: '${{ secrets.TOKEN }}'
+        args: -o niklasmerz -r myrepo -c master -e production
     - name: Docker build, push image
       run: |
         # オープンソースなのでDocker Hubで済ませる
@@ -97,20 +98,10 @@ jobs:
           docker rmi `docker images takoyaki0316/react-portfolio --filter "dangling=true" -q` -f
           docker pull takoyaki0316/react-portfolio:latest
           docker stack deploy -c ./scripts/docker-compose.yml portfolio
-    - name: 'Deploy ${{ github.event.deployment.environment }}'
-      run: |
-        echo "task - ${{ github.event.deployment.task }}"
-        echo "environment - ${{ github.event.deployment.environment }}"
-        echo "payload - ${{ toJson(github.event.deployment.payload) }}"
-    - name: 'deployment success'
+    - name: Deployment success
+      uses: niklasmerz/github-deployment-action@master
       if: success()
-      uses: 'deliverybot/status@master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        state: 'success'
-        token: '${{ secrets.TOKEN }}'
-    - name: 'deployment failure'
-      if: failure()
-      uses: 'deliverybot/status@master'
-      with:
-        state: 'failure'
-        token: '${{ secrets.TOKEN }}' 
+        args: -o niklasmerz -r myrepo -s success -u https://url.com -f

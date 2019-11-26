@@ -77,11 +77,12 @@ jobs:
       with:
         source: scripts/docker-compose.yml
         target: services/react-portfolio
-    - name: 'Deployment pending'
-      uses: 'deliverybot/status@master'
+    - name: update deploy status
+      if: always()
+      uses: unacast/actions-github-deployment-status@master
       with:
-        state: 'pending'
-        token: '${{ secrets.GITHUB_TOKEN }}'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        status: ${{ job.status }}
     - name: Deploy to server
       uses: appleboy/ssh-action@master
       with:

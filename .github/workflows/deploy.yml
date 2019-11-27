@@ -77,12 +77,13 @@ jobs:
       with:
         source: scripts/docker-compose.yml
         target: services/react-portfolio
-    - name: update deploy status
-      if: always()
-      uses: unacast/actions-github-deployment-status@master
+    - name: Create GitHub deployment
+      uses: chrnorm/deployment-action@releases/v1
+      id: deployment
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        status: ${{ job.status }}
+        token: "${{ github.token }}"
+        target-url: https://tako8ki.me
+        environment: production
     - name: Deploy to server
       uses: appleboy/ssh-action@master
       with:

@@ -99,3 +99,19 @@ jobs:
           docker rmi `docker images takoyaki0316/react-portfolio --filter "dangling=true" -q` -f
           docker pull takoyaki0316/react-portfolio:latest
           docker stack deploy -c ./scripts/docker-compose.yml portfolio
+    - name: Update deployment status (success)
+      if: success()
+      uses: chrnorm/deployment-status@releases/v1
+      with:
+        token: "${{ github.token }}"
+        target-url: http://tako8ki.me
+        state: "success"
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+    - name: Update deployment status (failure)
+      if: failure()
+      uses: chrnorm/deployment-status@releases/v1
+      with:
+        token: "${{ github.token }}"
+        target-url: http://tako8ki.me
+        state: "failure"
+        deployment_id: ${{ steps.deployment.outputs.deployment_id }}

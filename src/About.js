@@ -7,7 +7,7 @@ class About extends React.Component {
       <div class="about">
         <h2>About</h2>
         <div class="all-content">
-          <div class="img"><img src="https://i.gyazo.com/c022ae94fdfe4688247e7b2fdd5f283a.jpg"/></div>
+          <div class="img"><img src={`${process.env.PUBLIC_URL}/about.png`}/></div>
           <div class="content">
             <div class="name">前田喬之</div>
             <div class="name">Takayuki Maeda</div>

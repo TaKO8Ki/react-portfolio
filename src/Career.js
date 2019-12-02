@@ -15,6 +15,14 @@ class Career extends React.Component {
           <div class="description">
             市民工学科という学科で、土木工学について勉強しています。
           </div>
+          <div class="title">マネーフォワード（2019年11/1から現在まで）</div>
+          <div class="description">
+            マネーフォワード京都でバックエンドエンジニアとしてインターンしています。
+          </div>
+          <div class="title">Wantedly（2019年10/7から10/25まで）</div>
+          <div class="description">
+            Wantedly Visitのマッチンググロースチームで就業型インターンをしていました。
+          </div>
           <div class="title">Sansan（2019年9/2から9/13まで）</div>
           <div class="description">
             SansanのEight事業部で就業型インターンをしていました。

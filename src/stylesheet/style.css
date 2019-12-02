@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +14,17 @@ a {
 
 body {
   margin-top: 70px;
+  height: 100%;
   background:#f6f6f6;
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+#root > div {
+  height: 100%;
 }
 
 div.header {
@@ -34,8 +47,12 @@ div.header .content {
 /*home*/
 div.home {
   background: linear-gradient(#FFECB3,#FFC107);
-  height: 1000px;
+  height: 100%;
   margin-top: -21px;
+}
+
+div.body {
+  height: 100%;
 }
 
 div.home .title {
